@@ -10,7 +10,7 @@ def left_click():
 
 
 def move_mouse(cords):
-    win32api.SetCursosPos(cords)
+    win32api.SetCursorPos(cords)
 
 
 def get_cords():
