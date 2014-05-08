@@ -30,5 +30,3 @@ def find_image(screen, pattern):
              (top_left[1] + bottom_right[1])/2.0)
 
     return center
-
-print find_image(screen_grab(), cv2.imread('red_buff.jpeg', 0))
