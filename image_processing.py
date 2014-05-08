@@ -26,7 +26,9 @@ def find_image(screen, pattern):
     bottom_right = (top_left[0] + w, top_left[1] + h)
 
     # Find center
-    center = ((top_left[0] + bottom_right[0])/2.0,
-             (top_left[1] + bottom_right[1])/2.0)
+    center = (int((top_left[0] + bottom_right[0])/2.0),
+             (int(top_left[1] + bottom_right[1])/2.0))
 
     return center
+
+print find_image(screen_grab(), cv2.imread('red_buff.jpeg', 0))
