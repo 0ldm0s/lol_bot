@@ -14,16 +14,21 @@ menu_cords = {
     }
 
 # Choose the type of the game  - 5 humans vs 5 bots (level easy)
-ms.left_click(menu_cords['play'])
+ms.move_mouse(menu_cords['play'])
 time.sleep(.1)
-ms.left_click(menu_cords['coop_vs_ai'])
+ms.left_click()
+ms.move_mouse(menu_cords['coop_vs_ai'])
 time.sleep(.1)
-ms.left_click(menu_cords['classic'])
+ms.left_click()
+ms.move_mouse(menu_cords['classic'])
 time.sleep(.1)
-ms.left_click(menu_cords['summoner_rift'])
+ms.left_click()
+ms.move_mouse(menu_cords['summoner_rift'])
 time.sleep(.1)
-ms.left_click(menu_cords['beginner'])
+ms.left_click()
+ms.move_mouse(menu_cords['beginner'])
 time.sleep(.1)
+ms.left_click()
 
 # Wait for the game
 
