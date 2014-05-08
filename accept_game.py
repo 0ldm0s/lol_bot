@@ -17,9 +17,11 @@ menu_cords = {
 
 time_to_wait = 0.5
 
+correct_cords = img.find_image(cv2.imread('img/accept_button_screen.png', 0), cv2.imread('img/accept_button.jpg', 0))
+
 
 # wait 5 seconds before starting
-time.sleep(5)
+#time.sleep(5)
 
 # Choose the type of the game  - 5 humans vs 5 bots (level easy)
 ms.move_mouse(menu_cords['play'])
@@ -45,7 +47,8 @@ ms.left_click()
 
 in_champ_select = False
 while(not in_champ_select):
-    cords = img.find_image(img.screen_grab(),
-                           cv2.imread('img/accept_button.jpg', 0))
+    img.screen_grab()
+    cords = img.find_image(cv2.imread('test.png', 0), cv2.imread('img/accept_button.jpg', 0))
     print cords
-    ms.left_click(cords)
+    #ms.move_mouse(cords)
+    #ms.left_click()
