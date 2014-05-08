@@ -1,4 +1,12 @@
 import cv2
+import os
+import ImageGrab
+
+
+def screen_grab():
+    im = ImageGrab.grab()
+    im.save(os.getcwd() + 'test.png', 'PNG')
+    return im
 
 
 def find_image(screen, pattern):
@@ -23,4 +31,4 @@ def find_image(screen, pattern):
 
     return center
 
-#print find_image(cv2.imread('red_buff_screen.jpeg', 0), cv2.imread('red_buff.jpeg', 0))
+print find_image(screen_grab(), cv2.imread('red_buff.jpeg', 0))
