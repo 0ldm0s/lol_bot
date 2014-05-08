@@ -17,7 +17,8 @@ menu_cords = {
 
 time_to_wait = 0.5
 
-correct_cords = img.find_image(cv2.imread('img/accept_button_screen.png', 0), cv2.imread('img/accept_button.jpg', 0))
+#correct_cords = img.find_image(cv2.imread('img/accept_button_screen.png', 0), cv2.imread('img/accept_button.jpg', 0))
+correct_cords = (545, 541)
 
 
 # wait 5 seconds before starting
@@ -49,6 +50,8 @@ in_champ_select = False
 while(not in_champ_select):
     img.screen_grab()
     cords = img.find_image(cv2.imread('test.png', 0), cv2.imread('img/accept_button.jpg', 0))
+    if abs(correct_cords[0] - cords[0]) < 30 and abs(correct_cords[1] - cords[1]) < 30:
+	    in_champ_select = True
     print cords
-    #ms.move_mouse(cords)
-    #ms.left_click()
+ms.move_mouse(cords)
+ms.left_click()

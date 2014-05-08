@@ -5,7 +5,8 @@ import ImageGrab
 
 def screen_grab():
     im = ImageGrab.grab()
-    im.save(os.getcwd() + 'test.png', 'PNG')
+    im.save(os.getcwd() + '\\test.png', 'PNG')
+    print 'saved:' + os.getcwd() + '\\test.png'
     return im
 
 
