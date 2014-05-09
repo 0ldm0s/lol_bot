@@ -16,3 +16,7 @@ def move_mouse(cords):
 def get_cords():
     x, y = win32api.GetCursorPos()
     return x, y
+
+if __name__ == '__main__':
+	print get_cords()
+	time.sleep(10)
